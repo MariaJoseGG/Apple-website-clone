@@ -1,0 +1,307 @@
+@import "tailwindcss";
+
+@theme {
+  --color-blue: #2997ff;
+  --color-tuatara: #86868b;
+  --color-tuatara-100: #94928d;
+  --color-tuatara-200: #afafaf;
+  --color-tuatara-300: #42424570;
+  --color-tuatara-400: #3b3b3b;
+  --color-zinc: #101010;
+}
+
+@layer base {
+  * {
+    @apply m-0 p-0 box-border;
+  }
+
+  body {
+    @apply text-white w-dvw overflow-x-hidden h-full bg-black border border-tuatara-400 select-none;
+  }
+
+  canvas {
+    @apply touch-none;
+  }
+}
+
+@utility flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@utility nav-height {
+  height: calc(100vh - 60px);
+}
+
+@utility btn {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-radius: 1.5rem;
+  background-color: var(--color-blue);
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  border: 1px solid transparent;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background-color: transparent;
+    border-color: var(--color-blue);
+    color: var(--color-blue);
+  }
+}
+
+@utility color-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 9999px;
+  background-color: var(--color-tuatara-300);
+  backdrop-filter: blur(8px);
+}
+
+@utility size-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+  border-radius: 9999px;
+  background-color: var(--color-tuatara-300);
+  backdrop-filter: blur(8px);
+  margin-left: 0.75rem;
+  gap: 0.25rem;
+}
+
+@utility size-btn {
+  width: 2.5rem;
+  height: 2.5rem;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: black;
+  border-radius: 9999px;
+  transition: all 0.15s ease;
+}
+
+@utility common-padding {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+
+  @variant sm {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+@utility section-heading {
+  color: var(--color-tuatara);
+  font-size: 1.875rem;
+  line-height: 1;
+  margin-bottom: 1.25rem;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(5rem);
+
+  @variant md {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  @variant lg {
+    font-size: 3.75rem;
+    line-height: 1;
+    margin-bottom: 0;
+  }
+}
+
+@utility feature-text {
+  color: var(--color-tuatara);
+  max-width: 28rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  opacity: 0;
+  transform: translateY(100px);
+
+  @variant md {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+@utility feature-text-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 2.5rem;
+  gap: 1.25rem;
+
+  @variant md {
+    flex-direction: row;
+    margin-top: 4rem;
+  }
+}
+
+@utility feature-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transform: scale(1.5);
+  opacity: 0;
+}
+
+@utility feature-video-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  align-items: center;
+
+  @variant md {
+    flex-direction: row;
+  }
+}
+
+@utility link {
+  color: var(--color-blue);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  opacity: 0;
+  transform: translateY(5rem);
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@utility control-btn {
+  margin-left: 1rem;
+  padding: 1rem;
+  border-radius: 9999px;
+  background-color: var(--color-tuatara-300);
+  backdrop-filter: blur(8px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@utility hero-title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.875rem;
+  line-height: 1;
+  color: var(--color-tuatara-100);
+  opacity: 0;
+
+  @variant max-md {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@utility hiw-title {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 600;
+  text-align: center;
+
+  @variant md {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+}
+
+@utility hiw-subtitle {
+  color: var(--color-tuatara);
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  text-align: center;
+
+  @variant md {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@utility hiw-video {
+  position: absolute;
+  width: 95%;
+  height: 90%;
+  border-radius: 56px;
+  overflow: hidden;
+}
+
+@utility hiw-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 6rem;
+
+  @variant md {
+    flex-direction: row;
+  }
+}
+
+@utility hiw-text {
+  color: var(--color-tuatara);
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+
+  @variant md {
+    font-weight: 600;
+  }
+}
+
+@utility hiw-bigtext {
+  color: white;
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 400;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+
+  @variant md {
+    font-size: 3rem;
+    line-height: 1;
+    font-weight: 600;
+  }
+}
+
+@utility video-carousel_container {
+  position: relative;
+  width: 88vw;
+  height: 35vh;
+
+  @variant sm {
+    width: 70vw;
+    height: 50vh;
+  }
+
+  @variant md {
+    height: 70vh;
+  }
+}
+
+@utility g_fadeIn {
+  opacity: 0;
+  transform: translateY(100px);
+}
