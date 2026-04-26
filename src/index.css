@@ -12,11 +12,11 @@
 
 @layer base {
   * {
-    @apply m-0 p-0 box-border;
+    @apply m-0 box-border p-0;
   }
 
   body {
-    @apply text-white w-dvw overflow-x-hidden h-full bg-black border border-tuatara-400 select-none;
+    @apply h-full w-dvw overflow-x-hidden bg-black text-white select-none;
   }
 
   canvas {
@@ -28,6 +28,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@utility screen-max-width {
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  position: relative;
+  max-width: 1120px;
 }
 
 @utility nav-height {
