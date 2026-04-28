@@ -1,3 +1,7 @@
+# Original tutorial
+
+[Build and Deploy 3 Modern UI/UX Websites and Get Hired as a Frontend Developer | Full 10-Hour Course - JavaScript Mastery](https://youtu.be/RbxHZwFtRT4?si=um9ba9zpsFZji9l6&t=2871)
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
